@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane fx:id="mainPane" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="semesterprojektfx.FXMLDocumentController">
+   <children>
+      <Pane fx:id="communicationRoom" layoutX="1.0" prefHeight="332.0" prefWidth="395.0" visible="false">
+         <children>
+            <ImageView fitHeight="332.0" fitWidth="395.0" pickOnBounds="true">
+               <image>
+                  <Image url="@PNG/hallway floor.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="87.0" fitWidth="85.0" layoutX="155.0" layoutY="124.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@PNG/PC_Radio.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="100.0" layoutX="-8.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@PNG/WestDoor.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="100.0" layoutX="148.0" layoutY="244.0" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+               <image>
+                  <Image url="@PNG/SecretOpenDoor.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="72.0" fitWidth="70.0" layoutX="240.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@PNG/britney char1 (1).png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="72.0" fitWidth="70.0" layoutX="85.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@PNG/Character - mads.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane fx:id="airlock" prefHeight="332.0" prefWidth="395.0">
+         <children>
+            <ImageView fitHeight="332.0" fitWidth="395.0" pickOnBounds="true">
+               <image>
+                  <Image url="@PNG/airlock floor.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="100.0" layoutX="148.0" layoutY="245.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@PNG/SouthDoor.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="72.0" fitWidth="70.0" layoutX="163.0" layoutY="175.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@PNG/Character - mads.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="airlockMonster" fitHeight="72.0" fitWidth="70.0" layoutX="259.0" layoutY="225.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@PNG/monster char.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="127.0" layoutY="-12.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@PNG/airlock.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="40.0" layoutX="99.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@PNG/airlockSwitch(2).png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane fx:id="hallway" layoutX="1.0" prefHeight="332.0" prefWidth="395.0" visible="false">
+         <children>
+            <ImageView fitHeight="332.0" fitWidth="395.0" pickOnBounds="true">
+               <image>
+                  <Image url="@PNG/hallway floor.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="100.0" layoutX="302.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@PNG/EastDoor.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="100.0" layoutX="148.0" layoutY="-14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@PNG/NorthDoor.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="100.0" layoutX="148.0" layoutY="246.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@PNG/SouthDoor.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="72.0" fitWidth="70.0" layoutX="163.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@PNG/Character - mads.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="hallwayMonster" fitHeight="72.0" fitWidth="70.0" layoutX="24.0" layoutY="234.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@PNG/monster char.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="100.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@PNG/cabinet.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane fx:id="armory" prefHeight="332.0" prefWidth="395.0" visible="false">
+         <children>
+            <ImageView fitHeight="332.0" fitWidth="395.0" pickOnBounds="true">
+               <image>
+                  <Image url="@PNG/hallway floor.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="100.0" layoutX="-6.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@PNG/WestDoor.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="secretDoor" fitHeight="150.0" fitWidth="100.0" layoutX="148.0" layoutY="-12.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@PNG/SecretClosedDoor.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="breakableTable" fitHeight="70.0" fitWidth="86.0" layoutX="163.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@PNG/bord.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="72.0" fitWidth="70.0" layoutX="163.0" layoutY="181.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@PNG/Character - mads.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="rifleImg" fitHeight="63.0" fitWidth="50.0" layoutX="331.0" layoutY="141.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@PNG/rifle v1.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="noteImg" fitHeight="37.0" fitWidth="43.0" layoutX="180.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@PNG/note zuul.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="armouryMonster" fitHeight="72.0" fitWidth="70.0" layoutX="299.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@PNG/monster char.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="weaponCabinet" fitHeight="150.0" fitWidth="100.0" layoutX="319.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@PNG/cabinet.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="tableLeg" fitHeight="150.0" fitWidth="25.0" layoutX="208.0" layoutY="154.0" pickOnBounds="true" preserveRatio="true" rotate="90.0" visible="false">
+               <image>
+                  <Image url="@PNG/tableleg.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="secretDoor1" fitHeight="150.0" fitWidth="100.0" layoutX="149.0" layoutY="-12.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@PNG/SecretOpenDoor.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="brokenTable" fitHeight="70.0" fitWidth="86.0" layoutX="128.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@PNG/broken table.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane fx:id="medbay" prefHeight="329.0" prefWidth="395.0" visible="false">
+         <children>
+            <ImageView fx:id="mainMap" fitHeight="328.0" fitWidth="395.0" layoutY="2.0" pickOnBounds="true">
+               <image>
+                  <Image url="@PNG/medbay tiles.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="playerImg" fitHeight="72.0" fitWidth="70.0" layoutX="163.0" layoutY="198.0" pickOnBounds="true">
+               <image>
+                  <Image url="@PNG/Character - mads.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="tableImg" fitHeight="70.0" fitWidth="86.0" layoutY="144.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@PNG/bord.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="medkit" fitHeight="150.0" fitWidth="20.0" layoutX="25.0" layoutY="159.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@PNG/medkit.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="oxygen" fitHeight="150.0" fitWidth="50.0" layoutX="345.0" layoutY="154.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@PNG/oxegen tank.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="northDoor" fitHeight="150.0" fitWidth="100.0" layoutX="148.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@PNG/NorthDoor.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="medbayMonster" fitHeight="72.0" fitWidth="70.0" layoutX="289.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@PNG/monster char.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane fx:id="keyRoom" prefHeight="328.0" prefWidth="395.0" visible="false">
+         <children>
+            <ImageView fx:id="mainMap1" fitHeight="328.0" fitWidth="395.0" pickOnBounds="true">
+               <image>
+                  <Image url="@PNG/hallway floor.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="playerImg1" fitHeight="72.0" fitWidth="70.0" layoutX="163.0" layoutY="142.0" pickOnBounds="true">
+               <image>
+                  <Image url="@PNG/Character - mads.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="monster" fitHeight="70.0" fitWidth="86.0" layoutX="14.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@PNG/monster char.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="eastDoor" fitHeight="150.0" fitWidth="100.0" layoutX="295.0" layoutY="114.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@PNG/EastDoor.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="northDoor1" fitHeight="150.0" fitWidth="100.0" layoutX="148.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@PNG/NorthDoor.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="southDoor" fitHeight="150.0" fitWidth="100.0" layoutX="148.0" layoutY="240.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@PNG/SouthDoor.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="keyImg" fitHeight="37.0" fitWidth="37.0" layoutX="31.0" layoutY="146.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@PNG/keyModule.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="keyRoomMonster" fitHeight="70.0" fitWidth="86.0" layoutX="15.0" layoutY="240.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@PNG/monster char.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Group layoutX="338.0" layoutY="185.0">
+         <children>
+            <Button fx:id="eastButton" layoutX="165.0" layoutY="189.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="29.0" prefWidth="50.0" text="East" />
+            <Button fx:id="southButton" layoutX="116.0" layoutY="204.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="29.0" prefWidth="50.0" text="South" />
+            <Button fx:id="northButton" layoutX="116.0" layoutY="175.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="29.0" prefWidth="50.0" text="North" />
+            <Button fx:id="westButton" layoutX="68.0" layoutY="189.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="29.0" prefWidth="50.0" text="West" />
+            <Button fx:id="helpButton" layoutX="117.0" layoutY="233.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="29.0" prefWidth="50.0" text="Help" />
+            <Button fx:id="searchButton" layoutX="63.0" layoutY="262.0" mnemonicParsing="false" onAction="#listAction" prefHeight="29.0" prefWidth="58.0" text="Search" />
+            <Button fx:id="inspectButton" layoutX="161.0" layoutY="262.0" mnemonicParsing="false" onAction="#inspectSelectionAction" prefHeight="29.0" prefWidth="58.0" text="Inspect" />
+            <Button fx:id="takeButton" layoutX="67.0" layoutY="233.0" mnemonicParsing="false" onAction="#takeInventoryAction" prefHeight="29.0" prefWidth="50.0" text="Take" />
+            <Button fx:id="dropButton" layoutX="165.0" layoutY="233.0" mnemonicParsing="false" onAction="#dropButtonAction" prefHeight="29.0" prefWidth="50.0" text="Drop" />
+            <Button fx:id="talkButton" layoutX="116.0" layoutY="98.0" mnemonicParsing="false" onAction="#talkButtonAction" prefHeight="29.0" prefWidth="50.0" text="Talk" />
+            <Button fx:id="attackButton" layoutX="116.0" layoutY="291.0" mnemonicParsing="false" onAction="#attackFunction" prefHeight="29.0" prefWidth="50.0" text="Attack" />
+            <Button fx:id="useButton" layoutX="121.0" layoutY="262.0" mnemonicParsing="false" onAction="#useAction" prefHeight="29.0" prefWidth="40.0" text="Use" />
+            <Button fx:id="statusButton" layoutX="67.0" layoutY="291.0" mnemonicParsing="false" onAction="#statusButtonAction" prefHeight="29.0" prefWidth="50.0" text="Status" />
+            <Button fx:id="saveButton" layoutX="104.0" layoutY="138.0" mnemonicParsing="false" onAction="#saveButtonAction" prefHeight="29.0" text="Save game" />
+         </children>
+      </Group>
+      <TextArea fx:id="textOutArea" editable="false" layoutX="1.0" layoutY="337.0" prefHeight="177.0" prefWidth="395.0" wrapText="true">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </TextArea>
+      <Group layoutX="405.0" layoutY="-159.0">
+         <children>
+            <ProgressBar fx:id="AirBar" accessibleText="HP" layoutY="344.0" prefHeight="20.0" prefWidth="140.0" progress="0.0" />
+            <ProgressBar fx:id="HPbar" accessibleText="Air" layoutY="303.0" prefHeight="20.0" prefWidth="140.0" progress="0.0" />
+            <Label layoutX="-1.0" layoutY="286.0" text="HP" />
+            <Label layoutY="327.0" text="Air" />
+         </children>
+      </Group>
+      <Group layoutX="558.0" layoutY="-21.0">
+         <children>
+            <ImageView fx:id="miniMap" fitHeight="192.0" fitWidth="191.0" layoutX="4.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@PNG/minimap.png" />
+               </image>
+            </ImageView>
+            <ListView fx:id="roomInventory" editable="true" fixedCellSize="20.0" layoutY="227.0" prefHeight="134.0" prefWidth="199.0">
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+            </ListView>
+            <Label layoutX="4.0" layoutY="212.0" text="Room inventory" />
+            <ImageView fx:id="playerDot" fitHeight="18.0" fitWidth="21.0" layoutX="68.0" layoutY="175.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@PNG/green_dot.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="monsterDot" fitHeight="18.0" fitWidth="21.0" layoutX="59.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@PNG/red_Dot.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="britneyDot" fitHeight="18.0" fitWidth="21.0" layoutX="122.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@PNG/blue_dot.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Group>
+      <Group layoutX="558.0" layoutY="344.0" pickOnBounds="true">
+         <children>
+            <ListView fx:id="playerInventory" editable="true" fixedCellSize="20.0" layoutY="17.0" prefHeight="160.0" prefWidth="200.0">
+               <padding>
+                  <Insets bottom="5.0" />
+               </padding></ListView>
+            <Label text="Player inventory" />
+         </children>
+      </Group>
+      <Pane fx:id="endSplash" prefHeight="521.0" prefWidth="758.0" visible="false">
+         <children>
+            <ImageView fx:id="endSplashImage" fitHeight="521.0" fitWidth="758.0" pickOnBounds="true">
+               <image>
+                  <Image url="@PNG/duvandt.png" />
+               </image></ImageView>
+         </children></Pane>
+      <Pane fx:id="passwordPane" layoutX="395.0" layoutY="-2.0" prefHeight="134.0" prefWidth="156.0" visible="false">
+         <children>
+            <TextField fx:id="password" layoutX="4.0" layoutY="42.0" />
+            <Button fx:id="passwordSubmit" layoutX="47.0" layoutY="80.0" mnemonicParsing="false" onAction="#submitPassword" text="Submit" />
+         </children>
+      </Pane>
+      <Pane fx:id="splashScreen" prefHeight="521.0" prefWidth="758.0" visible="false">
+         <children>
+            <ImageView fitHeight="521.0" fitWidth="758.0" pickOnBounds="true">
+               <image>
+                  <Image url="@PNG/SplashScren.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="enterNameLabel" layoutX="299.0" layoutY="129.0" text="Enter name:" />
+            <TextField fx:id="playerNameEnterField" layoutX="294.0" layoutY="146.0" />
+            <Group layoutX="330.0" layoutY="209.0">
+               <children>
+                  <Button fx:id="startButton" layoutX="12.0" mnemonicParsing="false" onAction="#splashScreenAction" prefHeight="28.0" prefWidth="50.0" text="Start" />
+                  <Button fx:id="highScoreButton" layoutX="1.0" layoutY="38.0" mnemonicParsing="false" onAction="#highScoreLoad" text="High score" />
+                  <Button fx:id="loadButton" layoutY="72.0" mnemonicParsing="false" onAction="#loadButtonAction" text="Load game" />
+               </children>
+            </Group>
+            <Label fx:id="warningLabel" layoutX="303.0" layoutY="185.0" text="Label" visible="false" />
+            <ListView fx:id="highScoreList" layoutX="268.0" layoutY="312.0" prefHeight="200.0" prefWidth="200.0" />
+            <ImageView fitHeight="100.0" fitWidth="758.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@PNG/mads effect logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

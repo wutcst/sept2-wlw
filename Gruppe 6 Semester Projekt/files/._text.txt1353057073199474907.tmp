@@ -1,0 +1,8 @@
+medbay:in a medical bay. A flickering light reveals a counter, and a strange medical device in the corner.
+keyRoom:in a dimly lit room. In the corner you see a large creature
+armory:in an armoury, you see a weapon cabinet against the eastern wall, a bookcase against the north wall, and a table in the middle of the room.
+hallway:in a hallway, you see a large door to the east, a window on the western wall, and a cabinet.
+communicationRoom:in the communication room. A noisy radio array is in the middle of the room. There is a panel next to a large door.
+airlock:in an airlock. There is an exit hatch in front of you. On the eastern wall is a switch illuminated by a small light, and on the western wall is a small glass cabinet.
+airlockfail:A warning siren sounds, almost too loud for you to hear the mechanical clunk as the door behind you locks itself. Then all goes quiet as the hatch opens and you are sucked out into the vast emptiness of space, the last thought that crosse your mind milliseconds before it is frozen solid is “Why”.
+airlocksuccess:A warning siren sounds, almost too loud for you to hear the mechanical clunk as the door behind you locks itself. Then the hatch is open with the gentle sound of slight air decompression, and you are greeted by smiling faces and friendly arms that pull you aboard the rescue craft. You are finally safe.
