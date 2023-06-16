@@ -23,7 +23,7 @@ public class loadGameDao implements ILoadGameObject {
         PreparedStatement ps = null;
         //从用户表查询所有数据
         try {
-            String sql = "select scene_file from game_cache where player_name ? ";
+            String sql = "select scene_file from game_cache where player_name = ? ";
             ps = conn.prepareStatement(sql);
             ps.setString(1, playerName);
             rs = ps.executeQuery();//执行查询
