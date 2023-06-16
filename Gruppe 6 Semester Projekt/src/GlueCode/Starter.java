@@ -19,6 +19,7 @@ import java.io.IOException;
  *
  * @author Rasmus
  */
+//初始化
 public class Starter {
 
     public static void main(String[] args) {
