@@ -1,5 +1,16 @@
 package view;
 
+import javafx.beans.property.ListProperty;
+import javafx.beans.property.SimpleListProperty;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.*;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Pane;
 import model.Acquaintance.IImmovable;
 import model.Acquaintance.IItem;
 import model.Acquaintance.ILogic;
@@ -7,16 +18,9 @@ import model.Acquaintance.INPC;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.*;
-import java.util.logging.*;
-import javafx.beans.property.*;
-import javafx.collections.*;
-import javafx.event.ActionEvent;
-import javafx.fxml.*;
-import javafx.scene.control.*;
-import javafx.scene.image.ImageView;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.Pane;
+import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -557,12 +561,12 @@ public class FXMLDocumentController implements Initializable {
     //This method controls how the player can attack, and what the player can attack
     @FXML
     private void attackFunction(ActionEvent event){
-        for (INPC npc : logic.getCurrentRoomNPCList()) {
-            if (npc.getName().equalsIgnoreCase("monster")){
-                keyMonster = npc;
-                continue;
-            }      
-        }
+            for (INPC npc : logic.getCurrentRoomNPCList()) {
+                if (npc.getName().equalsIgnoreCase("monster")){
+                    keyMonster = npc;
+                    continue;
+                }
+            }
          for (IImmovable imov : logic.getCurrentRoomInteractList()) {
             if (imov.getName().equalsIgnoreCase("table")){
                 table = imov;
@@ -583,6 +587,8 @@ public class FXMLDocumentController implements Initializable {
                     roomInv.add("key");
                     keyImg.setVisible(true);
                     monsterDefeatCheck = true;
+                    monsterDot.setVisible (false);
+
                 }
                 control = true;
                 hpBarAction();
@@ -697,9 +703,9 @@ public class FXMLDocumentController implements Initializable {
         if (logic.getRoomNPCList("keyRoom").contains(keyMonster)) {
             monsterDot.setLayoutX(59);
             monsterDot.setLayoutY(129); 
-                if (monsterDefeatCheck == true) {
+               /* if (monsterDefeatCheck == true) {
                     keyRoomMonster.setVisible(true);
-                }
+                }*/
        }
         else if (logic.getRoomNPCList("armoury").contains(keyMonster)) {
             monsterDot.setLayoutX(105);
