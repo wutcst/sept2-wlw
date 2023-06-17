@@ -42,8 +42,7 @@ public class DataHighscore {
         return true;
     }
 /**
- * method that uses a Jackson mapper to read a json file and tun it into an arraylist of IPersonalScore objects
- * @return an arraylist of IPersonalScore objects.
+用以一个map方法
  */
     ArrayList loadHighscore() {
         ObjectMapper mapper = new ObjectMapper();
