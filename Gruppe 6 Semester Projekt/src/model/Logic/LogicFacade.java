@@ -5,13 +5,9 @@
  */
 package model.Logic;
 
+import model.Acquaintance.*;
+
 import java.util.ArrayList;
-import model.Acquaintance.ILogic;
-import model.Acquaintance.IData;
-import model.Acquaintance.IImmovable;
-import model.Acquaintance.IItem;
-import model.Acquaintance.INPC;
-import model.Acquaintance.IRoom;
 
 /**
  *
@@ -126,6 +122,7 @@ public class LogicFacade implements ILogic {
     public ArrayList<INPC> getCurrentRoomNPCList() {
         ArrayList<INPC> IList = new ArrayList();
         for (NPC i : game.currentRoom.getNPCList()) {
+
             IList.add(i);
         }
         return IList;

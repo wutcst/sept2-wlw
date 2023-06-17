@@ -703,11 +703,11 @@ public class FXMLDocumentController implements Initializable {
         if (logic.getRoomNPCList("keyRoom").contains(keyMonster)) {
             monsterDot.setLayoutX(59);
             monsterDot.setLayoutY(129); 
-               /* if (monsterDefeatCheck == true) {
+              /*  if (monsterDefeatCheck == true) {
                     keyRoomMonster.setVisible(true);
                 }*/
        }
-        else if (logic.getRoomNPCList("armoury").contains(keyMonster)) {
+      /*  else if (logic.getRoomNPCList("armoury").contains(keyMonster)) {
             monsterDot.setLayoutX(105);
             monsterDot.setLayoutY(130);
             armouryMonster.setVisible(true);
@@ -733,7 +733,7 @@ public class FXMLDocumentController implements Initializable {
         }
         if (!logic.getRoomNPCList("airlock").contains(keyMonster)) {
             airlockMonster.setVisible(false);
-        }
+        }*/
     }
     
     @FXML
