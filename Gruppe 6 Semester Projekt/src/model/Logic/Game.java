@@ -12,7 +12,7 @@ import java.util.ArrayList;
  * @author Michael Kolling and David J. Barnes
  * @version 2006.03.30
  */
-// the Class that contains the specifics in the game and assigns values to the initialized constructors
+// 包含游戏中的细节并将值分配给初始化构造函数的类
 public class Game {
 
     private String secondWord;  // refractior of the youse of the second word, its now d´the command given from the gui, the word have not been changed due to legacy reasons, alot of the logig resoved aroud this word therefor it was kept
@@ -41,7 +41,7 @@ public class Game {
         createRooms();
     }
 
-    //initializing of the rooms objects needed in the game 
+    //初始化游戏中所需的房间对象
     public void createRooms() {   //asigning the room objects
 
         // The initialication of the room objects
@@ -183,7 +183,7 @@ public class Game {
 //        }
 //    }
 
-    //Returns the description of the word after the commandWord.
+    //返回命令世界之后的世界说明。
     public String getItemDescription(String secondWord) {
         String inspectString = "";
         String item = secondWord;
@@ -251,7 +251,7 @@ public class Game {
         return inspectString;
     }
 
-    //Breaks the specified object by running the breakTable method
+    //通过运行 breakTable 方法中断指定的对象
     public void breakObject() {
         Item notes = new Item("notes", "The notes have a series of numbers written"
                 + " on it. The numbers are 28374. You should probably "
@@ -260,7 +260,7 @@ public class Game {
 
     }
 
-    //Adds the item comming after the commandWord to the players inventory.
+    //将命令字后面的物品添加到玩家物品栏中。
     public void addInventory(String secondWord) {
         String object = secondWord;
         if (secondWord.isEmpty()) {
@@ -411,8 +411,8 @@ public class Game {
 //        }
 //    }
 
-    /**Controls what is removed from the players inventory based on what the player
-    has selected from their inventory.*/
+    /**根据玩家的内容控制从玩家物品栏中移除的内容
+     已从其库存中选择。*/
 
     public String removeFromInventory(String secondWord) {
         String object = secondWord;
@@ -444,7 +444,7 @@ public class Game {
 
     }
 
-    // This method, handles using ones items, that are in the players inventory
+    // 此方法使用玩家物品栏中的物品进行处理
     public String useItem(String secondWord) {
         String object = secondWord;
         int air = player.getAir();
