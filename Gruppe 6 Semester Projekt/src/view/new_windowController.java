@@ -7,7 +7,6 @@ import javafx.scene.control.Label;
 
 public class new_windowController {
     @FXML private Label label;
-    @FXML private Button exitButton;
 
     @FXML
     private void initialize() {

@@ -402,9 +402,7 @@ public class FXMLDocumentController implements Initializable {
         roomInventory.itemsProperty().bind(listPropertyRoom);
 
     }
-    //Controls which pane the GUI should show, based on where the player is.
-    //It also runs the method 'awakenMonster', which makes the monster move from
-    //room to room
+
     private void roomChange() throws IOException{
         String roomName = logic.getCurrentRoomName();
         if (roomName.equalsIgnoreCase("medbay")) {
