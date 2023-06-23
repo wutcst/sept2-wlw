@@ -6,7 +6,6 @@
 package model.Acquaintance;
 
 import java.util.ArrayList;
-
 public interface IRoom {
      String getName();
      String getShortDescription();
