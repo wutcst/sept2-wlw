@@ -1,9 +1,7 @@
 package model.Logic;
 
 import model.Acquaintance.IImmovable;
-import model.Acquaintance.IItem;
-import model.Acquaintance.INPC;
-import model.Acquaintance.IRoom;
+
 import java.io.IOException;
 
 import java.util.ArrayList;

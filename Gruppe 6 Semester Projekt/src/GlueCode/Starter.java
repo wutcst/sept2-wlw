@@ -5,12 +5,8 @@
  */
 package GlueCode;
 
-import controller.PersistenceFacade;
-import model.Acquaintance.IData;
-import model.Acquaintance.IGUI;
 import model.Acquaintance.ILogic;
 import model.Logic.Game;
-import model.Logic.LogicFacade;
 import view.GUIFacade;
 
 import java.io.IOException;

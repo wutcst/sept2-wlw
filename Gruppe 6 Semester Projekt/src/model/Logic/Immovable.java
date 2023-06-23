@@ -1,10 +1,8 @@
 package model.Logic;
 
 import model.Acquaintance.IImmovable;
-import model.Acquaintance.IItem;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
-import model.Acquaintance.Interactables;
 
 /**
  *
