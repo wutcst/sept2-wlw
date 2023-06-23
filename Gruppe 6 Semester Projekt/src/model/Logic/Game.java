@@ -723,7 +723,7 @@ public class Game {
         airlock.setExit("south", hallway);
         //creating immovables
 
-        //Exits and pathways that need to be unlocked
+        //需要解锁的出口和路径
         armoury.addSecretExit("notes", communicationRoom);
         hallway.addSecretExit("quiz", communicationRoom);
         communicationRoom.addSecretExit("lever", hallway);
