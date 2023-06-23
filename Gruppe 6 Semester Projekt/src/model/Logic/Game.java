@@ -513,7 +513,7 @@ public class Game {
     }
 
 
-// method for the commandword talk
+// 命令词说话的方法
     public String talk(String secondWord) {
         String talkString = "";
         if (!secondWord.isEmpty()) { //What happens if no second word is given
@@ -540,11 +540,7 @@ public class Game {
     }
 
     public String roomLogic() {
-        /* This method is meant to hold all the logic that should be checked for
-        ** each command cycle. These checks will run without needing any user 
-        ** input
-         */
-        // All rooms
+
         
        String returnString = null;
         
