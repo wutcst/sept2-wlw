@@ -6,12 +6,10 @@
 package model.Acquaintance;
 
 /**
- *
- * there ar more methods that is not included in the interface yet if they shuld be neseary
+ * there are more methods that is not included in the interface yet if they shuld be necessary
  */
 public interface INPC {
      String getName();
-     void setDescription(String description);
      String getDescription();
      boolean getHostility();
      void setHostility(boolean hostile);
@@ -22,5 +20,4 @@ public interface INPC {
       IItem getItem();
       int getHealth();
      boolean getDefeated();
-
 }
