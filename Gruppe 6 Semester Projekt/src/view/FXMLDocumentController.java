@@ -1,8 +1,10 @@
 package view;
 
+
 import javafx.scene.Scene;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+
 import model.Acquaintance.IImmovable;
 import model.Acquaintance.IItem;
 import model.Acquaintance.ILogic;
@@ -21,11 +23,13 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 
+
 public class FXMLDocumentController implements Initializable {
     GUIFacade gui;
     ILogic logic;
     INPC keyMonster;
-//    IItem rifle;
+
+    String playerName;
     private IImmovable table;
     private GUIFacade scene = new GUIFacade();
     int attempts = 3;
@@ -55,6 +59,8 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private ProgressBar HPbar;
 
+    @FXML
+    private ImageView miniMap;
     @FXML
     private ListView<String> roomInventory = new ListView<>();
     private ObservableList<String> roomInv = FXCollections.observableArrayList();
@@ -95,14 +101,16 @@ public class FXMLDocumentController implements Initializable {
     private ImageView southDoor;
     @FXML
     private Pane medbay;
-//    @FXML
-//    private AnchorPane mainPane;
-//    @FXML
-//    private ImageView playerImg;
-//    @FXML
-//    private ImageView tableImg;
-//    @FXML
-//    private ImageView northDoor;
+
+    @FXML
+    private AnchorPane mainPane;
+    @FXML
+    private ImageView playerImg;
+    @FXML
+    private ImageView tableImg;
+    @FXML
+    private ImageView northDoor;
+
     @FXML
     private Pane keyRoom;
     @FXML
@@ -123,12 +131,13 @@ public class FXMLDocumentController implements Initializable {
     private Pane airlock;
     @FXML
     private Pane communicationRoom;
-//    @FXML
-//    private Button attackButton;
-//    @FXML
-//    private Button useButton;
-//    @FXML
-//    private Button statusButton;
+
+    @FXML
+    private Button attackButton;
+    @FXML
+    private Button useButton;
+    @FXML
+    private Button statusButton;
     @FXML
     private Pane splashScreen;
     @FXML
@@ -401,8 +410,6 @@ public class FXMLDocumentController implements Initializable {
         listPropertyRoom.set(FXCollections.observableList(roomInv));
         roomInventory.itemsProperty().bind(listPropertyRoom);
 
-    }
-
     private void roomChange() throws IOException{
         String roomName = logic.getCurrentRoomName();
         if (roomName.equalsIgnoreCase("medbay")) {
@@ -482,6 +489,7 @@ public class FXMLDocumentController implements Initializable {
                         + "\n'A rescue ship has been sent your way and will arrive shortly'");
                         logic.setPlayerCalledHelp(true);
 
+
                 try {
                     // 加载新窗口的 FXML 文件
                     FXMLLoader loader = new FXMLLoader(getClass().getResource("new_window.fxml"));
@@ -503,7 +511,7 @@ public class FXMLDocumentController implements Initializable {
                 }
 
 
-                        
+        
             
             } else if((!playerInv.isEmpty() && logic.checkPlayerItems("key") && playerInv.isEmpty())){
                 textOutArea.appendText("The radio seem to be missing some sort of key");
@@ -654,7 +662,10 @@ public class FXMLDocumentController implements Initializable {
     //player does something wrong
     @FXML
     private void splashScreenAction(ActionEvent event){
+
         String playerName = playerNameEnterField.getText();
+
+        playerName = playerNameEnterField.getText();
         if (!playerName.equalsIgnoreCase("") && !playerName.equalsIgnoreCase(null)) {
             logic.setPlayerName(playerName);
             splashScreen.setVisible(false);
@@ -742,7 +753,10 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private void loadButtonAction(ActionEvent event) {
         try {
+
             logic.loadGame();
+            playerName = playerNameEnterField.getText();
+            logic.loadGame(playerName);
             for (IItem i : logic.getPlayerInventory()){
                 playerInv.add(i.getName());
             }
@@ -763,7 +777,8 @@ public class FXMLDocumentController implements Initializable {
             textOutArea.appendText("\nGame saved successfully.");
         }
     }
-    public void monsterAttack () {
+
+    private void monsterAttack () {
         if (logic.getCurrentRoomNPCList().contains(logic.getCurrentRoomNPC("monster"))) {
             if (logic.getCurrentRoomNPC("monster").getHostility() && logic.getCurrentRoomNPC("monster").getDefeated()) {
                     textOutArea.appendText("\nThe monster attacks you for 12 damage.");

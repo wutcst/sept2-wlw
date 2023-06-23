@@ -12,6 +12,7 @@ import com.fasterxml.jackson.databind.SerializerProvider;
 import com.fasterxml.jackson.databind.ser.std.StdSerializer;
 import java.io.IOException;
 
+
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class SaveSerializer extends StdSerializer<SaveFile> {
     
@@ -23,7 +24,16 @@ public class SaveSerializer extends StdSerializer<SaveFile> {
         super(t);
     
     }
-    //This is the custom serializaer method
+
+
+    /**
+     * 保存游戏场景
+     * @param t
+     * @param jg
+     * @param sp
+     * @throws IOException
+     * @throws JsonProcessingException
+     */
     @Override
     public void serialize(SaveFile t, JsonGenerator jg, SerializerProvider sp) throws IOException, JsonProcessingException {
         //Here we starte the JsonGenerator for object
