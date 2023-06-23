@@ -1,5 +1,4 @@
 package model.Logic;
-
 import model.Acquaintance.IImmovable;
 import model.Acquaintance.IItem;
 import model.Acquaintance.INPC;
@@ -9,7 +8,6 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import java.util.ArrayList;
 import java.util.Set;
 import java.util.HashMap;
-
 
 // this class is used for crating room objects for the player to transition between
 @JsonIgnoreProperties(ignoreUnknown = true)
@@ -161,9 +159,7 @@ public class Room implements IRoom {
         for (INPC n : this.npcList) {
             if (n.getName().equals(npc)) {
                 object = n;
-            } /*if (object != null){
-                return object;
-            }*/ else {
+            } else {
                 break;
             }
         }
@@ -251,5 +247,4 @@ public class Room implements IRoom {
             System.out.println("Hashmap contains: " + s);
         }
     }
-
 }
