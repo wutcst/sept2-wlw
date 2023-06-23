@@ -21,15 +21,11 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 
-/**
- *
- * @author goope
- */
 public class FXMLDocumentController implements Initializable {
     GUIFacade gui;
     ILogic logic;
     INPC keyMonster;
-    IItem rifle;
+//    IItem rifle;
     private IImmovable table;
     private GUIFacade scene = new GUIFacade();
     int attempts = 3;
@@ -58,8 +54,7 @@ public class FXMLDocumentController implements Initializable {
     private ProgressBar AirBar;
     @FXML
     private ProgressBar HPbar;
-    @FXML
-    private ImageView miniMap;
+
     @FXML
     private ListView<String> roomInventory = new ListView<>();
     private ObservableList<String> roomInv = FXCollections.observableArrayList();
@@ -100,14 +95,14 @@ public class FXMLDocumentController implements Initializable {
     private ImageView southDoor;
     @FXML
     private Pane medbay;
-    @FXML
-    private AnchorPane mainPane;
-    @FXML
-    private ImageView playerImg;
-    @FXML
-    private ImageView tableImg;
-    @FXML
-    private ImageView northDoor;
+//    @FXML
+//    private AnchorPane mainPane;
+//    @FXML
+//    private ImageView playerImg;
+//    @FXML
+//    private ImageView tableImg;
+//    @FXML
+//    private ImageView northDoor;
     @FXML
     private Pane keyRoom;
     @FXML
@@ -128,12 +123,12 @@ public class FXMLDocumentController implements Initializable {
     private Pane airlock;
     @FXML
     private Pane communicationRoom;
-    @FXML
-    private Button attackButton;
-    @FXML
-    private Button useButton;
-    @FXML
-    private Button statusButton;
+//    @FXML
+//    private Button attackButton;
+//    @FXML
+//    private Button useButton;
+//    @FXML
+//    private Button statusButton;
     @FXML
     private Pane splashScreen;
     @FXML
@@ -405,16 +400,7 @@ public class FXMLDocumentController implements Initializable {
         }
         listPropertyRoom.set(FXCollections.observableList(roomInv));
         roomInventory.itemsProperty().bind(listPropertyRoom);
-        
-//        if (itemName.equalsIgnoreCase(medkit.getId())) {
-//            medkit.setVisible(true);
-//        }
-//        else if (itemName.equalsIgnoreCase(oxygen.getId())){
-//            oxygen.setVisible(true);
-//        }
-//        else if (itemName.equalsIgnoreCase("rifle")){
-//            rifleImg.setVisible(true);
-//        }
+
     }
     //Controls which pane the GUI should show, based on where the player is.
     //It also runs the method 'awakenMonster', which makes the monster move from
@@ -779,7 +765,7 @@ public class FXMLDocumentController implements Initializable {
             textOutArea.appendText("\nGame saved successfully.");
         }
     }
-    private void monsterAttack () {
+    public void monsterAttack () {
         if (logic.getCurrentRoomNPCList().contains(logic.getCurrentRoomNPC("monster"))) {
             if (logic.getCurrentRoomNPC("monster").getHostility() && logic.getCurrentRoomNPC("monster").getDefeated()) {
                     textOutArea.appendText("\nThe monster attacks you for 12 damage.");
