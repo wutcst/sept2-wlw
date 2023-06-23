@@ -6,7 +6,6 @@
 package model.Acquaintance;
 
 /**
- *
  * 物品类接口
  */
 public interface IItem {
@@ -15,8 +14,6 @@ public interface IItem {
     int getAir();
     String getName();
     String getDescription();
-    String getUseDescription();
-    boolean isPickupable();
     void setFlag(boolean flag);
     boolean getFlag();
     void setDescription(String string);
