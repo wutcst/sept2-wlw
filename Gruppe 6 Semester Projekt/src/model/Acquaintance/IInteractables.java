@@ -5,19 +5,12 @@
  */
 package model.Acquaintance;
 
-/**
- *
- * 物品类接口
- */
-public interface IItem {
-    int getDmg();
-    int getHP();
-    int getAir();
+public interface IInteractables {
     String getName();
     String getDescription();
     String getUseDescription();
     boolean isPickupable();
-    void setFlag(boolean flag);
     boolean getFlag();
+    void setFlag(Boolean flag);
     void setDescription(String string);
 }
