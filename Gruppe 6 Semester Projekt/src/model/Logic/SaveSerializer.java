@@ -12,10 +12,7 @@ import com.fasterxml.jackson.databind.SerializerProvider;
 import com.fasterxml.jackson.databind.ser.std.StdSerializer;
 import java.io.IOException;
 
-/**
- *
- * @author Nick
- */
+
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class SaveSerializer extends StdSerializer<SaveFile> {
     
@@ -27,6 +24,7 @@ public class SaveSerializer extends StdSerializer<SaveFile> {
         super(t);
     
     }
+
 
     /**
      * 保存游戏场景
