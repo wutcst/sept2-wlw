@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="files">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Gruppe 6 Semester Projekt/files/jackson-databind-2.9.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Gruppe 6 Semester Projekt/files/jackson-annotations-2.9.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Gruppe 6 Semester Projekt/files/java-json.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Gruppe 6 Semester Projekt/files/jackson-core-2.9.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
