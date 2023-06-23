@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.util.ArrayList;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class NPC implements INPC {
-
     private Item item;
     private String name = "";
     private String description = "";
@@ -13,11 +12,8 @@ public class NPC implements INPC {
     private boolean movable = false;
     private int health = 100;
     private int baseDamage = 100;
-    private ArrayList<Item> inventory;
-    
     private boolean toldToEvacuate = false;
     private boolean defeated = false;
-    
     
      public NPC() {
        
@@ -69,11 +65,6 @@ public class NPC implements INPC {
     @Override
     public String getName(){
         return this.name;
-    }
-    
-    @Override
-    public void setDescription(String description) {
-        this.description = description;
     }
     
     @Override
