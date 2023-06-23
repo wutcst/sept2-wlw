@@ -748,7 +748,7 @@ public class Game {
             }
         }
 
-        // communicationRoom
+        // 交流房间
         if (currentRoom == communicationRoom) {
             // Positive NPC response
             if (!doorLockPanel.getFlag() && currentRoom.getFirstTimeEntered()) {
