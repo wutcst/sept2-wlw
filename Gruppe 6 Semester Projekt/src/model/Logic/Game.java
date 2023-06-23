@@ -318,7 +318,7 @@ public class Game {
             System.out.println("Use what?");
             return "Use what?";
         }
-        // it checks for the items in the inventory
+        // 检查库存中的物品
         for (IItem i : player.getInventory()) {
             //here it checks if, an item is in the inventory
             if (object.equalsIgnoreCase("keymodule") && radioArray.getFlag() == false && currentRoom == communicationRoom) {
@@ -328,10 +328,7 @@ public class Game {
                 return "You take the keymodule and slot it into the radio, as soon as the module clicks in place the radio come to life with a static buzz.";
             }
             if (i.getName().equalsIgnoreCase(object)) {
-                //here it checks an statement, that checks for either the 
-                // players hp or air, for the item that the user wants to use, 
-                // and then uses the item, if the statement is fulfilled, and 
-                // removes the item from the users inventory
+
                 if (air < 65 && i.getName().equalsIgnoreCase(oxygen)) {
                     System.out.println("You used the " + object + ". It gave you " + i.getAir() + " air.");
                     player.setAir(air + i.getAir());
@@ -359,8 +356,7 @@ public class Game {
                         return "You used the " + object + ". It gave you " + i.getAir() + " air.";
                     }
                 } 
-                //Here it checks, if the players hp or air is already full, 
-                // that the player cant use the medkits or oxygen tanks.
+
                 else if (air >= 100 && i.getName().equalsIgnoreCase(oxygen)) {
                     System.out.println("Your oxygen-tank is already full");
                     return "Your oxygen-tank is already full";
@@ -368,18 +364,17 @@ public class Game {
                     System.out.println("Your HP is already full");
                     return "Your HP is already full";
                 }
-                // use the key at the radio to get it to be able to call help. 
-                // And removes the key from inventory.
+
             }
         }
-        // usikker på om jeg stadig har brug for denne failsafe
+
         for (IItem i : player.getInventory()) {
             if (!object.equalsIgnoreCase(i.getName())) {
                 System.out.println("Use what??");
                 return "Use what?";
             }
         }
-        // usikker på om jeg har brug for denne failsafe, eller den lige over
+
         System.out.println("That item isnt in your inventory");
         return "That item isn't in your inventory!";
     }
