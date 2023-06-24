@@ -9,6 +9,7 @@ package model.Acquaintance;
  *
  * @author goope
  */
+//对game类的实现方法提供接口
 public interface IGame {
     
 }
