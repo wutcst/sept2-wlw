@@ -627,6 +627,7 @@ public class Game {
 
     }
 
+    //对获取状态的功能实现，和接口一起提供实现，给inspect按钮实现提供顶层逻辑
     Room getMedbay() {
         return medbay;
     }
