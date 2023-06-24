@@ -5,16 +5,14 @@
  */
 package model.Acquaintance;
 
-/**
- * 物品类接口
- */
-public interface IItem {
-    int getDmg();
-    int getHP();
-    int getAir();
+//An interface with the set methods our interactable objects use.
+public interface Interactables {
     String getName();
     String getDescription();
-    void setFlag(boolean flag);
+    String getUseDescription();
+    boolean isPickupable();
     boolean getFlag();
+    void setFlag(boolean flag);
     void setDescription(String string);
+    void setDestructible(boolean destructable);
 }

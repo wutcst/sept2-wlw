@@ -7,7 +7,7 @@
 <!-- the Compile on Save feature is turned off for the project. -->
 <!-- You can turn off the Compile on Save (or Deploy on Save) setting -->
 <!-- in the project's Project Properties dialog box.-->
-<project name="world of zuul" default="default" basedir=".">
+<project name="Gruppe_6_Semester_Projekt" default="default" basedir=".">
     <description>Builds, tests, and runs the project Gruppe 6 Semester Projekt.</description>
     <import file="nbproject/build-impl.xml"/>
     <!--
