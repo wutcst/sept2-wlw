@@ -122,7 +122,7 @@ public class Immovable implements Interactables, IImmovable{
     public boolean getDestructible() {
         return this.destructible;
     }
-
+//对玩法的些许改动
     @Override
     public boolean isPickupable() {
         return this.isPickupable; //To change body of generated methods, choose Tools | Templates.
