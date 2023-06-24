@@ -134,6 +134,7 @@ public class Immovable implements Interactables, IImmovable{
     }
 
     @Override
+    //规范setFlag的注释
     public void setFlag(boolean flag) {
         this.flag = flag;
     }
