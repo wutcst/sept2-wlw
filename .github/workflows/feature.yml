@@ -10,9 +10,17 @@ name: Java CI with Maven feature
 
 on:
   push:
-    branches: [ "Wuaoni" ]
+    branches:
+      - feature-gameCommand-wj 
+      - feature-ItemNPC-ld
+      - feature-GUI-qyl
+      - feature-SaveLoaderPLayer-wan
   pull_request:
-    branches: [ "Wuaoni" ]
+    branches:
+      - feature-gameCommand-wj 
+      - feature-ItemNPC-ld
+      - feature-GUI-qyl
+      - feature-SaveLoaderPLayer-wan
 
 jobs:
   build:
