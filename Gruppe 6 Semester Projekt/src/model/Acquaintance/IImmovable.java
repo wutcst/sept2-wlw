@@ -8,7 +8,7 @@ package model.Acquaintance;
 /**
  *
  * @author Rasmus
- */
+ *///实现各个接口的功能
 public interface IImmovable {
     public String getName();
     public int getItemDmg();
