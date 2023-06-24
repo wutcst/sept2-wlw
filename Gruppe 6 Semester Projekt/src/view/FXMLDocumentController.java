@@ -18,10 +18,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 
-/**
- *
- * @author goope
- */
+
 public class FXMLDocumentController implements Initializable {
     GUIFacade gui;
     ILogic logic;
