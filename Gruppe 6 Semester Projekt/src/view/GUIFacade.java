@@ -7,10 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.*;
 import javafx.stage.Stage;
 
-/**
- *
- * @author goope
- */
+
 public class GUIFacade extends Application implements IGUI {
 
     static GUIFacade gui;
